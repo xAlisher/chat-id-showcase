@@ -1,0 +1,24 @@
+{
+  "name": "chat_id_showcase_ui",
+  "version": "0.1.0",
+  "type": "ui_qml",
+  "category": "tools",
+  "description": "Enter a Chat ID and hand it to the QR Generator",
+  "view": "qml/Main.qml",
+  "icon": "qml/icons/icon.png",
+  "dependencies": ["chat_id_showcase"],
+
+  "nix": {
+    "packages": {
+      "build": [],
+      "runtime": []
+    },
+    "external_libraries": [],
+    "cmake": {
+      "find_packages": [],
+      "extra_sources": [],
+      "extra_include_dirs": [],
+      "extra_link_libraries": []
+    }
+  }
+}

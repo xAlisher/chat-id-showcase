@@ -1,0 +1,28 @@
+{
+  "name": "chat_id_showcase",
+  "version": "0.1.0",
+  "type": "core",
+  "category": "tools",
+  "description": "Hold a Chat ID and hand it to the QR Generator over the chat_module IPC contract",
+  "main": "chat_id_showcase_plugin",
+  "icon": "",
+  "dependencies": [],
+
+  "nix": {
+    "packages": {
+      "build": [],
+      "runtime": []
+    },
+    "external_libraries": [],
+    "cmake": {
+      "find_packages": ["Qt6 COMPONENTS Core Qml"],
+      "extra_sources": [
+        "src/ChatIdShowcasePlugin.cpp"
+      ],
+      "extra_include_dirs": [
+        "src"
+      ],
+      "extra_link_libraries": []
+    }
+  }
+}

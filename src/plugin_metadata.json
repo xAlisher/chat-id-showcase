@@ -1,0 +1,11 @@
+{
+  "IID": "org.logos.ChatIdShowcaseInterface",
+  "author": "xAlisher",
+  "category": "tools",
+  "dependencies": [],
+  "description": "Showcase chat-ID source for the QR Generator",
+  "main": "chat_id_showcase_plugin",
+  "name": "chat_id_showcase",
+  "type": "core",
+  "version": "0.1.0"
+}

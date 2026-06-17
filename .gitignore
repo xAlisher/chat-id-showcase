@@ -1,0 +1,20 @@
+# Nix build artifacts
+result
+result-*
+plugins/*/result
+plugins/*/result-*
+
+# CMake / build
+build/
+cmake/
+
+# lgx outputs
+*.lgx
+logos-*-module-lgx-*/
+logos-*-module.lgx/
+
+# logs
+logs/
+
+# OS
+.DS_Store
