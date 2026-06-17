@@ -18,6 +18,7 @@ Item {
 
     property string statusMsg:   ""
     property bool   statusIsOk:  false
+    property string shownId:     ""    // drives the inline QrCard (dogfoods the drop-in component)
 
     // logos.callModule returns a double-JSON-encoded string; unwrap to a boolean.
     function parseBool(raw) {
@@ -51,6 +52,7 @@ Item {
             return
         }
         logos.callModule("chat_id_showcase", "createIntroBundle", [])  // push to any open QR Generator
+        root.shownId = id                                              // also show it inline via QrCard
         statusIsOk = true
         statusMsg = "Chat ID published. Open the QR Generator to see the QR."
     }
@@ -129,6 +131,19 @@ Item {
                 Layout.fillWidth: true
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.WordWrap
+            }
+
+            // ── Drop-in QR card (the embeddable component, dogfooded here) ──
+            QrCard {
+                visible: root.shownId.length > 0
+                Layout.fillWidth: true
+                Layout.topMargin: 8
+                title: "My Chat ID"
+                description: "Scan to start a private chat"
+                payload: root.shownId
+                // theme to match the showcase (dogfoods the #8 style props)
+                cardBg: bgSecondary
+                accent: accentOrange
             }
         }
     }

@@ -1,13 +1,15 @@
 {
   "name": "chat_id_showcase_ui",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "ui_qml",
   "category": "tools",
   "description": "Enter a Chat ID and hand it to the QR Generator",
   "view": "qml/Main.qml",
   "icon": "qml/icons/icon.png",
-  "dependencies": ["chat_id_showcase"],
-
+  "dependencies": [
+    "chat_id_showcase",
+    "qr"
+  ],
   "nix": {
     "packages": {
       "build": [],
